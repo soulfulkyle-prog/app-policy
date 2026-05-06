@@ -1,19 +1,53 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>개인정보 처리방침</title>
+  <title>Privacy Policy</title>
+  <script>
+    function setLanguage() {
+      const lang = navigator.language || navigator.userLanguage;
+
+      if (lang.startsWith('ko')) {
+        document.getElementById('ko').style.display = 'block';
+        document.getElementById('en').style.display = 'none';
+      } else {
+        document.getElementById('ko').style.display = 'none';
+        document.getElementById('en').style.display = 'block';
+      }
+    }
+  </script>
 </head>
-<body>
-  <h1>개인정보 처리방침</h1>
 
-  <p>이 앱은 사용자 개인정보를 수집하거나 저장하지 않습니다.</p>
-  <p>네트워크 통신이 발생할 경우에도 개인을 식별할 수 있는 정보는 수집되지 않습니다.</p>
+<body onload="setLanguage()">
 
-  <h2>문의</h2>
-  <p>이메일: soulful.kyle@gmail.com</p>
+  <!-- 한국어 -->
+  <div id="ko" style="display:none;">
+    <h1>개인정보 처리방침</h1>
 
-  <h1>지원 (Support)</h1>
-  <p>앱 관련 문의는 위 이메일로 연락 바랍니다.</p>
+    <p>이 앱은 사용자 개인정보를 수집하거나 저장하지 않습니다.</p>
+    <p>앱은 외부 서버에서 이미지를 불러오기 위해 네트워크 통신을 사용할 수 있으나, 개인을 식별할 수 있는 정보는 수집되지 않습니다.</p>
+
+    <h2>수집하는 정보</h2>
+    <p>본 앱은 개인을 식별할 수 있는 어떠한 정보도 수집하지 않습니다.</p>
+
+    <h2>문의</h2>
+    <p>이메일: soulful.kyle@gmail.com</p>
+  </div>
+
+
+  <!-- 영어 -->
+  <div id="en" style="display:none;">
+    <h1>Privacy Policy</h1>
+
+    <p>This app does not collect or store any personal data.</p>
+    <p>The app may load images from external servers, but no personally identifiable information is collected.</p>
+
+    <h2>Information We Collect</h2>
+    <p>No personally identifiable information is collected.</p>
+
+    <h2>Contact</h2>
+    <p>Email: soulful.kyle@gmail.com</p>
+  </div>
+
 </body>
 </html>
